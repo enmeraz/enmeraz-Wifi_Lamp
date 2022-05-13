@@ -43,6 +43,7 @@ button {
   background-color: green;
   border-radius: 4px;
   color: white;
+  font-size: 20px;
 }
 
 button:hover{
@@ -52,4 +53,5 @@ button:hover{
   border-color: green;
   padding: 6px 20px;
   margin: 6px;
+  font-size: 20px;
 }

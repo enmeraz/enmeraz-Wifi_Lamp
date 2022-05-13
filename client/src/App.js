@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import React,{Component}from 'react';
 import './App.css';
 
 // function App() {
@@ -22,16 +23,35 @@ import './App.css';
 //   );
 // }
 
-function App() {
-  return (
-    <div id="mainwindow" className="App">
-      <h1>FINAL Network Project</h1>
-      <p>LED #1</p>
-      <button>OFF</button>
-      <p>LED #2</p>
-      <button>OFF</button>
-    </div>
-  );
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      isToggleOn: false
+    }
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    //chnage state
+    this.setState(state => ({
+      isToggleOn : !state.isToggleOn
+    }));
+  }
+
+  render(){
+    return (
+      <div id="mainwindow" className="App">
+        <h1>FINAL Network Project</h1>
+        <p>LED #1</p>
+        <button onClick={this.handleClick}>{this.state.isToggleOn ? "ON" : "OFF"}</button>
+        <p>LED #2</p>
+        <button onClick={this.handleClick}>{this.state.isToggleOn ? "ON" : "OFF"}</button>
+      </div>
+    );
+  }
 }
 
 export default App;
