@@ -1,7 +1,9 @@
 //code for ESP32 for arduino
 
+// Load Wi-Fi library
 #include <WiFi.h>
  
+//network credentials
 const char* ssid = "yourNetworkName";
 const char* password =  "yourNetworkPass";
  
@@ -38,7 +40,7 @@ void loop()
  
     Serial.println("Connected to server successful!");
  
-    client.print("Hello from ESP32!");
+    client.print("Hello from ESP32 (WIFI device) !");
  
     Serial.println("Disconnecting...");
     client.stop();
