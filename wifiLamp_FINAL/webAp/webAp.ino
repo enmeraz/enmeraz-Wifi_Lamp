@@ -31,6 +31,7 @@
   Serial.println(ssid);  
    
   // Create the ESP32 access point  
+  //Notes
   /*  
    * Alternative:  
    * softAP(const char* ssid,  

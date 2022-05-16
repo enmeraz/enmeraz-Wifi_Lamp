@@ -12,8 +12,7 @@
    
  const char* ssid   = "Test_1";         // This is the SSID that ESP32 will broadcast  
  const char* password = "12345678";     // password should be atleast 8 characters to make it work  
-   
- // Create the global variable  
+ 
  String http;
  String temp;  
  String bluLedState = "off";  

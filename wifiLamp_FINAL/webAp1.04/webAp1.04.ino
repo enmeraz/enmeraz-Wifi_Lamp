@@ -18,9 +18,13 @@
 
  String http;
  String temp;  
+
+ //LEDs
  String bluLedState = "off";  
  String grnLedState = "off";  
  String redLedState = "off"; 
+
+ //Sequences
  String sequence1 = "off";
  String sequence2 = "off";
  String sequence3 = "off"; 
@@ -95,14 +99,14 @@
   client.println();   
  }  
    
+// In here we will display / update the webpage by sending the HTML   
+//  to the connected client  
+// In order for us to use the HTTP GET functionality,  
+//  the HTML hyperlinks or href is use in the buttons.   
+//  So that, when you press the buttons, it will send a request to the   
+//  web server with the href links by which our ESP32 web server will  
+//  be check using HTTP GET and execute the equivalent action  
  void updateWebpage() {  
-  // In here we will display / update the webpage by sending the HTML   
-  //  to the connected client  
-  // In order for us to use the HTTP GET functionality,  
-  //  the HTML hyperlinks or href is use in the buttons.   
-  //  So that, when you press the buttons, it will send a request to the   
-  //  web server with the href links by which our ESP32 web server will  
-  //  be check using HTTP GET and execute the equivalent action  
     
   // Send the whole HTML  
   client.println("<!DOCTYPE html><html>");  
