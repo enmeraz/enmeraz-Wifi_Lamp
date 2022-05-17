@@ -157,7 +157,6 @@
 //  Then turns the LED on / off according to the HTTP request  
  void updateLED() {  
 //sequence description found in updateWebPage()
-
   if (sequence1 == "on") {  
     count = count % 4;
     switch (count){
@@ -241,7 +240,7 @@
   digitalWrite(BLUE_LED, LOW);  
  }
 
-//created states to turn off led when button is off
+//created states to turn off led when button is off or on
 void updateState(){
    if    (http.indexOf("GET /Sequence_1/on") >= 0) {  
    sequence1 = "on";

@@ -43,7 +43,7 @@
   Serial.println( "IP address: " );  
   Serial.println( WiFi.softAPIP() );  
    
-  // Start our ESP32 server  
+  // Start our ESP32 or ESP8266 server   
   server.begin();  
  }
 
@@ -97,14 +97,13 @@
   client.println();   
  }  
    
-// In here we will display / update the webpage by sending the HTML   
+// In here we will display/update the webpage by sending the HTML   
 //  to the connected client  
-// In order for us to use the HTTP GET functionality,  
-//  the HTML hyperlinks or href is use in the buttons.   
-//  So that, when you press the buttons, it will send a request to the   
-//  web server with the href links by which our ESP32 web server will  
-//  be check using HTTP GET and execute the equivalent action  
  void updateWebpage() {  
+// In order for us to use the HTTP GET functionality, the HTML hyperlinks or href is use in the buttons.   
+// So that, when you press the buttons, it will send a request to the   
+// web server with the href links by which our ESP32 web server will  
+//  be check using HTTP GET and execute the equivalent action  
     
   // Send the whole HTML  
   client.println("<!DOCTYPE html><html>");  
